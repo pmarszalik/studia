@@ -1,0 +1,5 @@
+W załączniku znajduje się archiwum z pakietem mastermind. Zamodelowałem w nim część znanej gry planszowej o nazwie Mastermind, a mianowicie zbiór wszystkich układów pionków, które mogą być jeszcze prawidłowe. Zadanie polega na zaimplementowaniu dwóch wersji PossibleCompositions:
+
+    Zbiór, który zwraca jakikolwiek możliwy układ.
+
+    Zbiór, który zwraca w pewnym sensie "najlepszy" układ. Jest to układ, który najlepiej dzieli aktualny zbiór, czyli generuje podział minimalizujący rozmiar największego zbioru możliwych układów po otrzymaniu odpowiedzi od gracza kodującego.

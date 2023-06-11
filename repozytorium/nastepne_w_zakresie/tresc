@@ -1,0 +1,50 @@
+Uwaga: Złożoność funkcji init powinna być w najgorszym razie 𝑂(|𝑋|log2|𝑋|)
+
+.
+
+Twoim zadaniem jest zaimplementowanie struktury danych umożliwiającej efektywne odpowiadanie na określone zapytania dotyczące ciągu liczb X.
+
+Dla ustalonego ciągu 𝑋=𝑥0,𝑥1,…,𝑥𝑛−1
+
+interesuje nas funkcja:
+
+nextInRange(i, [a, b]) 
+
+która wyznacza najmniejszy indeks j taki, że 𝑗≥𝑖
+oraz 𝑥𝑗∈[𝑎,𝑏]
+
+. Jeśli taki indeks nie istnieje, wynikiem funkcji powinno być -1.
+
+Czyli:
+
+𝑛𝑒𝑥𝑡𝐼𝑛𝑅𝑎𝑛𝑔𝑒(𝑖,[𝑎,𝑏])=min{𝑗≥𝑖:𝑥𝑗∈[𝑎,𝑏]}
+
+ lub -1 (jeśli taki indeks nie istnieje)
+
+Twój moduł powinien udostępniać następujące funkcje:
+
+void init(const vector<int> &x) – inicjalizacja ciągu X przez wartości wektora x (uwaga! ciąg może zawierać dowolne wartości mieszczące się w typie int)
+
+int nextInRange(int i, int a, int b) – oblicz wartość nextInRange(i, [a, b]). Możesz założyć, że 0≤𝑖<|𝑋|
+i 𝙸𝙽𝚃_𝙼𝙸𝙽≤𝑎≤𝑏≤𝙸𝙽𝚃_𝙼𝙰𝚇
+
+.
+
+void done() – zwolnienie całej pamięci używanej do obsługiwania ciągu X.
+
+Deklaracje podanych funkcji znajdują się w pliku next.h. Twoim zadaniem jest zaimplementowanie podanych funkcji w pliku next.cpp.
+
+Komenda kompilacji:
+
+g++ @opcjeCpp main.cpp next.cpp -o main.e
+
+Aby Twoje rozwiązanie uzyskało maksymalną punktację, koszt czasowy funkcji nextInRange musi wynosić 𝑂(log|𝑋|)
+. Jeśli koszt czasowy tej funkcji będzie 𝑂(log2|𝑋|)
+
+, możesz otrzymać 4 punkty.
+
+Twoje rozwiązanie zostanie także uruchomione za pomocą narzędzia valgrind, które pozwala sprawdzać m.in., czy program nie miał wycieków pamięci. W przypadku wykrycia wycieków pamięci za pomocą komendy:
+
+valgrind --tool=memcheck --leak-check=yes ./main.e
+
+możesz stracić od 1 do 2 punktów za zadanie.

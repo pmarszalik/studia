@@ -1,0 +1,3 @@
+W załączniku do tego zadania znajduje się pakiet o nazwie immutable. Zawiera on interfejs niemutowalnego zbioru bez nulli. Pracą domową jest stworzenie implementacji dla tego interfejsu opartą o drzewo BST (należy przekopiować kod pakietu do swojego projektu). Wynikowa klasa powinna być generyczna, np. BST<T extends Comparable<T>> implements ImmutableSet<T> { ... }
+
+Nie trzeba implementować żadnego drzewa samoorganizującego się, złożoność metod nie jest taka istotna. Jednakże chciałbym, żebyście zwrócili uwagę na to jak dużą część niemutowalnego drzewa BST trzeba przepisywać w trakcie operacji insert i remove.
